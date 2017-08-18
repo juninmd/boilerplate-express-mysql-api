@@ -1,4 +1,3 @@
-const clienteRep = require('../repository/clienteRep');
 
 module.exports = {
     validar: (nome) => {
@@ -13,12 +12,8 @@ module.exports = {
                 });
             }
             clienteRep.inserir(nome)
-                .then(q => {
-                    return resolve({ sucesso: 'ok' });
-                })
-                .catch(err => {
-                    return reject({ erro: 'erro' });
-                });
+                .then(q => resolve({ sucesso: 'ok' }))
+                .catch(err => reject({ erro: 'erro' }));
         });
     }
 }

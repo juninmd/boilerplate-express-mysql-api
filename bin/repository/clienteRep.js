@@ -1,4 +1,4 @@
-const webconfig = require('../../webconfig');
+const webconfig = require('../webconfig');
 const mysql = require('jano-mysql')(webconfig.dataConfig.MYSQL);
 
 module.exports = {

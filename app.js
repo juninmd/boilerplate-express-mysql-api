@@ -1,27 +1,16 @@
-const express = require('express');
-const webconfig = require('./webconfig');
+const app = require("express")();
 const consign = require('consign');
-const app = express();
-
-const package = require('./package.json');
-// Don't forget to configure the paramters 
-const shazam = require('shazam-middleware')({
-    slack: webconfig.slack,
-    api: {
-        name: 'My App',
-        version: package.version
-    }
-});
-
-app.use(shazam.log);
+require('dotenv').config({ path: `./bin/env/${process.env.NODE_ENV || 'development'}.env` })
+const webconfig = require('./bin/webconfig.js');
 
 consign()
-    .include('middleware')
-    .then('layers/controller')
+    .include('kernel')
+    .then('bin/controller')
+    .then('middleware')
     .into(app);
 
-app.use(shazam.exception);
+app.listen(webconfig.myApi.port, () => {
+    console.log(`[${webconfig.myApi.name}] - Ativo :D | ${webconfig.myApi.url}:${webconfig.myApi.port}`);
+});
 
-app.listen(webconfig.portApi, () => {
-    console.log(`[${webconfig.nameApi}] rodando em: ${webconfig.urlApi}:${webconfig.portApi}`)
-})
+module.exports = app;

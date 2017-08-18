@@ -1,0 +1,13 @@
+const package = require('../package.json');
+
+const shazam = require('shazam-middleware')({
+    api: {
+        name: package.name,
+        version: package.version
+    }
+});
+
+module.exports = (app) => {
+    app.use(shazam.log);
+    app.use(shazam.exception);
+};

@@ -7,8 +7,9 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "consign": "^0.1.6",
-    "express": "^4.15.3",
-    "jano-mysql": "^0.0.4",
-    "shazam-middleware": "^0.0.2"
+    "dotenv": "^4.0.0",
+    "express": "^4.15.4",
+    "jano-mysql": "^0.0.7",
+    "shazam-middleware": "^0.0.5"
   }
 }
