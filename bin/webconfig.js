@@ -21,5 +21,5 @@ module.exports = {
         channel: process.env.channel,
         iconUrl: process.env.iconUrl,
         botusername: process.env.botusername
-    }
+    },
 };
