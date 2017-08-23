@@ -1,9 +1,8 @@
 module.exports = (app) => {
-    app.get("/error", (req, res, next) => {
+    app.get("/timeout", (req, res, next) => {
         for (i = 0; i < 999; i++) {
             console.info('aaaaa');
         }
-        batata
-
+        return res.status(200).send({});
     })
 }
