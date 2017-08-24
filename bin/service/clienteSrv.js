@@ -4,10 +4,10 @@ module.exports = {
         return new Promise((resolve, reject) => {
             if (nome != 'murilo') {
                 return reject({
-                    statusCode: 400,
+                    statusCode: 500,
                     message: {
-                        userMessage: 'O nome do cliente é diferente de murilo',
-                        developerMessage: 'nome != "murilo"'
+                        userMessage: 'This man doesn`t have acess',
+                        developerMessage: 'He is not on the list of Administrators'
                     }
                 });
             }
