@@ -1,7 +1,13 @@
 module.exports = (app) => {
 
+    app.get("/error/promise", (req, res, next) => {
+        return new Promise((resolve, reject) => {
+            a
+        })
+    })
+
     app.get("/error/function", (req, res, next) => {
-        setTimeout(function() {
+        setTimeout(function () {
             kkkkk
         }, 2000);
     })
