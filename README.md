@@ -1,3 +1,3 @@
-# Murilo API
+# boilerplate-express-mysql-api
 
-Murilo api é um projeto para incentizar o Murilo a escrever suas primeiras apis.
+API simples em express com mysql
