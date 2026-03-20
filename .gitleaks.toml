@@ -1,0 +1,4 @@
+[[allowlist]]
+description = "False positive: slack-webhook-url in bin/shazam/shazamConfig.js"
+rules = ["slack-webhook-url"]
+paths = ["bin/shazam/shazamConfig.js"]
