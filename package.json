@@ -5,10 +5,10 @@
   "main": "app.js",
   "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.17.2",
+    "body-parser": "^1.20.8",
     "consign": "^0.1.6",
     "dotenv": "^4.0.0",
-    "express": "^4.15.4",
+    "express": "^4.22.3",
     "jano-mysql": "^0.0.7",
     "shazam-middleware": "^0.1.0"
   }
