@@ -9,7 +9,7 @@ yarn install --frozen-lockfile
 node app.js
 ```
 
-O app lê `bin/env/<NODE_ENV>.env` (padrão `development.env`) e sobe na `PORT`. Variáveis usadas em `bin/webconfig.js` e `bin/shazam/shazamConfig.js`: `PORT`, `NODE_ENV`, `mysqlhost`, `mysqluser`, `mysqlpassword`, `mysqldatabase`, `mysqlport`, `urlHook`, `channel`, `iconUrl`, `botusername`.
+O app lê `bin/env/<NODE_ENV>.env` (padrão `development.env`) e sobe na `PORT`. Variáveis lidas em `app.js` e `bin/webconfig.js`: `PORT`, `NODE_ENV`, `mysqlhost`, `mysqluser`, `mysqlpassword`, `mysqldatabase`, `mysqlport`, `urlHook`, `channel`, `iconUrl`, `botusername`.
 
 Não há scripts `build`, `lint` ou `test` em `package.json`; o gate de PR pula essas etapas.
 
