@@ -11,6 +11,7 @@ module.exports = {
                     }
                 });
             }
+            const clienteRep = require('../repository/clienteRep');
             clienteRep.inserir(nome)
                 .then(q => resolve({ sucesso: 'ok' }))
                 .catch(err => reject({ erro: 'erro' }));
