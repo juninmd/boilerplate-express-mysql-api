@@ -1,7 +1,0 @@
-# Supressoes por fingerprint - triagem manual registrada no PR de seguranca.
-
-# Webhook do Slack removido do HEAD (agora vem de process.env.urlHook).
-# O valor antigo continua no historico publico e DEVE SER REVOGADO no Slack
-# (Apps > Incoming Webhooks > Revoke). Apos revogar, remover estas linhas.
-
-d1552d1843317e89b1ca7f8b110f00f4eb0e76ed:bin/shazam/shazamConfig.js:slack-webhook-url:9
