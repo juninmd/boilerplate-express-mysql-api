@@ -1,7 +1,0 @@
-[extend]
-useDefault = true
-
-[allowlist]
-description = "False positive: slack-webhook-url in bin/shazam/shazamConfig.js"
-targetRules = ["slack-webhook-url"]
-paths = ["bin/shazam/shazamConfig.js"]

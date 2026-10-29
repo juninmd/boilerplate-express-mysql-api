@@ -6,8 +6,10 @@ const shazam = require('shazam-middleware')({
         version: package.version
     },
     slack:{
-        urlHook: 'https://hooks.slack.com/services/***REMOVED***',
-        channel: 'shazam'
+        // Nunca versione o webhook: ele e uma credencial viva.
+        // Defina urlHook no bin/env/<NODE_ENV>.env (ou em GitHub Secrets no CI).
+        urlHook: process.env.urlHook,
+        channel: process.env.channel || 'shazam'
     }
 });
 
